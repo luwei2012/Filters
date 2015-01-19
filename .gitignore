@@ -1,28 +1,21 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+.DS_Store
+cocos2d/*
+xcuserdata
+xcshareddata
+proj.android/obj/*
+proj.android/assets/*
+proj.android/bin/*
+proj.android/libs/armeabi*
+proj.android/Default/*
+proj.android/gen/*
+proj.wp8-xaml/App/Bin/*
+proj.wp8-xaml/App/obj/*
+proj.wp8-xaml/ARM/*
+proj.wp8-xaml/AppComponent/ARM/*
+proj.wp8-xaml/AppComponent/Debug/*
+proj.wp8-xaml/AppComponent/Generated Files/*
+*.opensdf
+*.sdf
+*.suo
+*[0-9].pvr.ccz
+*[0-9].plist
