@@ -23,12 +23,12 @@
    [Note] Normally, developer just need to define one design resolution(e.g. 960x640) with one or more resources.
  */
 
-#define DESIGN_RESOLUTION_320X480    0
-#define DESIGN_RESOLUTION_768X1024   1
-#define DESIGN_RESOLUTION_1536X2048  2
+#define DESIGN_RESOLUTION_480X320    0
+#define DESIGN_RESOLUTION_1024X768   1
+#define DESIGN_RESOLUTION_2048X1536  2
 
 /* If you want to switch design resolution, change next line */
-#define TARGET_DESIGN_RESOLUTION_SIZE  DESIGN_RESOLUTION_1536X2048
+#define TARGET_DESIGN_RESOLUTION_SIZE  DESIGN_RESOLUTION_480X320
 
 typedef struct tagResource
 {
@@ -36,16 +36,16 @@ typedef struct tagResource
     char directory[100];
 }Resource;
 
-static Resource smallResource  =  { cocos2d::Size(320, 480),  "iphone" };
-static Resource mediumResource =  { cocos2d::Size(320, 480),  "ipad"   };
-static Resource largeResource  =  { cocos2d::Size(320, 480), "ipadhd" };
+static Resource smallResource  =  { cocos2d::Size(480, 320),  "iphone" };
+static Resource mediumResource =  { cocos2d::Size(1024, 768),  "ipad"   };
+static Resource largeResource  =  { cocos2d::Size(2048, 1536), "ipadhd" };
 
-#if (TARGET_DESIGN_RESOLUTION_SIZE == DESIGN_RESOLUTION_320X480)
-static cocos2d::Size designResolutionSize = cocos2d::Size(320, 480);
-#elif (TARGET_DESIGN_RESOLUTION_SIZE == DESIGN_RESOLUTION_768X1024)
-static cocos2d::Size designResolutionSize = cocos2d::Size(768, 1024);
-#elif (TARGET_DESIGN_RESOLUTION_SIZE == DESIGN_RESOLUTION_1536X2048)
-static cocos2d::Size designResolutionSize = cocos2d::Size(1536, 2048);
+#if (TARGET_DESIGN_RESOLUTION_SIZE == DESIGN_RESOLUTION_480X320)
+static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
+#elif (TARGET_DESIGN_RESOLUTION_SIZE == DESIGN_RESOLUTION_1024X768)
+static cocos2d::Size designResolutionSize = cocos2d::Size(1024, 768);
+#elif (TARGET_DESIGN_RESOLUTION_SIZE == DESIGN_RESOLUTION_2048X1536)
+static cocos2d::Size designResolutionSize = cocos2d::Size(2048, 1536);
 #else
 #error unknown target design resolution!
 #endif

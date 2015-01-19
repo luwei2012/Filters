@@ -18,10 +18,16 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto glview = director->getOpenGLView();
     if(!glview) {
         glview = GLView::create("My Game");
+        if(CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
+        {
+            //是 mac平台
+            glview->setFrameSize(designResolutionSize.width, designResolutionSize.height);//设置窗口大小
+        }
+        
         director->setOpenGLView(glview);
     }
  
-    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::FIXED_HEIGHT); 
+    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::FIXED_WIDTH);
     
     Size frameSize = glview->getFrameSize();
     
