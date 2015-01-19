@@ -14,13 +14,14 @@
 class A : public Filter
 {
 public:
-    A();   
+	A();
+	
 private:
-    virtual void loadShader();
-    virtual void bindAttributes();
-    virtual void bindUniforms();
+	virtual void loadShader();
+	virtual void bindAttributes();
+	virtual void bindUniforms();
 };
-REGISTER_CLASS(Filter,FlashFilter);
+REGISTER_CLASS(Filter,A);
 
 2.使用自己的新滤镜
 
